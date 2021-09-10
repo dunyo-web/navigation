@@ -1,0 +1,109 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+nav{
+    background-color: #00ffff;
+    padding: 5px 10px;
+    box-shadow: #111 22px 4px 10px;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #111;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+.logo a{
+    font-size: 30px;
+    font-weight: 600;
+}
+.menuBar li{
+    font-size: 18px;
+    padding: 15px 5px;
+}
+.menuBar li a{
+    display: block;
+}
+.menuBar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle{
+    order:1;
+    cursor: pointer;
+}
+.item.button{
+    order: 2;
+}
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+    margin-right: 100px;
+}
+.item.active{
+    display: block;
+}
+.bars{
+    background-color:black;
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+}
+.bars::before,.bars::after{
+    background-color: black;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    position: absolute;
+}
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+@media screen and (min-width:300px){
+    .menuBar{
+        justify-content: center;
+    }
+    .logo{
+        flex:1;
+    }
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle{
+        order: 2;
+    }
+    .button.secodary a{
+        background: transparent;
+    }
+}
+@media screen and (min-width:600px){
+    .logo{
+        order: 0;
+    }
+    .item{
+        width: auto;
+        order: 1;
+        display: block;
+        padding: 15px 10px;
+    }
+    .item.button{
+        order: 2;
+    }
+    .toggle{
+        display: none;
+    }
+}
+    
